@@ -1,0 +1,130 @@
+{
+  "name": "claude-code-workflows",
+  "owner": {
+    "name": "Raushan ",
+    "email": "raushan5683@gmail.com",
+    "url": "https://github.com/rakaseth"
+  },
+  "metadata": {
+    "description": "Production-ready workflow orchestration with 21 specialized plugins, 63 agents, 30 commands, and 32 skills - optimized for backend, frontend, e-commerce, DevOps, SEO, and full-stack development",
+    "version": "2.2.0"
+  },
+  "plugins": [
+    {
+      "name": "fullstack-ecommerce-app",
+      "source": "./plugins/fullstack-ecommerce-app",
+      "description": "Complete fullstack e-commerce solution with Node.js/Express backend, React web, and React Native mobile - handles 1K-10K orders/month with Stripe/PayPal, JWT auth, and PostgreSQL",
+      "version": "1.0.0",
+      "author": {
+        "name": "Raushan",
+        "url": "https://github.com/rakaseth"
+      },
+      "homepage": "https://github.com/rakaseth/stc_agents",
+      "repository": "https://github.com/rakaseth/stc_agents",
+      "license": "MIT",
+      "keywords": [
+        "fullstack",
+        "nodejs",
+        "express",
+        "react",
+        "react-native",
+        "ecommerce",
+        "stripe",
+        "paypal",
+        "prisma",
+        "postgresql",
+        "jwt",
+        "typescript"
+      ],
+      "category": "development",
+      "strict": false
+    },
+    {
+      "name": "code-documentation",
+      "source": "./plugins/code-documentation",
+      "description": "Documentation generation, code explanation, and technical writing with automated doc generation and tutorial creation",
+      "version": "2.0.0",
+      "author": {
+        "name": "Raushan",
+        "url": "https://github.com/rakaseth"
+      },
+      "homepage": "https://github.com/rakaseth/stc_agents",
+      "repository": "https://github.com/rakaseth/stc_agents",
+      "license": "MIT",
+      "keywords": [
+        "documentation",
+        "code-explanation",
+        "technical-writing",
+        "tutorials"
+      ],
+      "category": "documentation",
+      "strict": false
+    },
+    {
+      "name": "git-pr-workflows",
+      "source": "./plugins/git-pr-workflows",
+      "description": "Git workflow automation, pull request enhancement, and team onboarding processes",
+      "version": "2.0.0",
+      "author": {
+        "name": "raushan",
+        "url": "https://github.com/rakaseth"
+      },
+      "homepage": "https://github.com/rakaseth/agents",
+      "repository": "https://github.com/rakaseth/stc_agents",
+      "license": "MIT",
+      "keywords": [
+        "git",
+        "pull-request",
+        "workflow",
+        "onboarding",
+        "essential"
+      ],
+      "category": "workflows",
+      "strict": false
+    },
+    {
+      "name": "frontend-mobile-development",
+      "source": "./plugins/frontend-mobile-development",
+      "description": "Frontend UI development and mobile application implementation across platforms",
+      "version": "2.0.0",
+      "author": {
+        "name": "raushan",
+        "url": "https://github.com/rakaseth"
+      },
+      "homepage": "https://github.com/rakaseth/agents",
+      "repository": "https://github.com/rakaseth/agents",
+      "license": "MIT",
+      "keywords": [
+        "frontend",
+        "mobile",
+        "react",
+        "ui",
+        "cross-platform"
+      ],
+      "category": "development",
+      "strict": false
+    },
+    {
+      "name": "seo-analysis-monitoring",
+      "source": "./plugins/seo-analysis-monitoring",
+      "description": "Content freshness analysis, cannibalization detection, and authority building for SEO",
+      "version": "2.0.0",
+      "author": {
+        "name": "raushan",
+        "url": "https://github.com/rakaseth"
+      },
+      "homepage": "https://github.com/rakaseth/agents",
+      "repository": "https://github.com/rakaseth/agents",
+      "license": "MIT",
+      "keywords": [
+        "seo",
+        "content-analysis",
+        "e-e-a-t",
+        "authority",
+        "monitoring"
+      ],
+      "category": "marketing",
+      "strict": false
+    }
+  ]
+}
