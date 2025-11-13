@@ -33,7 +33,7 @@ Each plugin is completely isolated with its own agents, commands, and skills:
 - **Clear boundaries** - Each plugin has a single, focused purpose
 - **Progressive disclosure** - Skills load knowledge only when activated
 
-**Example**: Installing `maestro-backend` loads 5 Python/FastAPI agents, 2 development commands, and makes 6 skills available for production-grade backend development.
+
 
 ## Quick Start
 
@@ -42,10 +42,10 @@ Each plugin is completely isolated with its own agents, commands, and skills:
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add raushan-dj/agents
+/plugin marketplace add rakaseth/stc_agents
 ```
 
-This makes all 21 plugins available for installation, but **does not load any agents or tools** into your context.
+This makes all plugins available for installation, but **does not load any agents or tools** into your context.
 
 ### Step 2: Install Plugins
 
@@ -59,20 +59,8 @@ Install the plugins you need:
 
 ```bash
 # Essential development plugins
-/plugin install maestro-backend             # FastAPI/Python with 6 specialized skills
-/plugin install degreed-fe-workspace        # Angular 19 with 8 specialized skills
-/plugin install fullstack-ecommerce-app     # Node.js + React + React Native fullstack
-/plugin install react-ecommerce-development # React e-commerce with 4 specialized skills
-/plugin install jira-bugfix-analyzer        # JIRA bug analysis for .NET
-/plugin install jira-bugfix-implementer     # Automated bug fix implementation
-
-# Infrastructure & operations
-/plugin install kubernetes-operations       # K8s with 4 deployment skills
-/plugin install cloud-infrastructure        # AWS/Azure/GCP with 4 cloud skills
-
-# AI & ML
-/plugin install machine-learning-ops        # ML pipelines and MLOps
-/plugin install agent-orchestration         # Multi-agent system optimization
+           # FastAPI/Python with 6 specialized skills
+/plugin install fullstack-ecommerce-app # React e-commerce with 4 specialized skills
 
 # SEO & Marketing
 /plugin install seo-technical-optimization  # Technical SEO
@@ -101,13 +89,8 @@ Each installed plugin loads **only its specific agents, commands, and skills** i
 
 ## What's New
 
-### Agent Skills (31 skills across 8 plugins)
 
 Specialized knowledge packages following Anthropic's progressive disclosure architecture:
-
-**Backend Development:**
-- **Maestro Backend** (6 skills): PRD parsing, task breakdown, code pattern analysis, Python testing, async patterns, performance optimization
-- **Degreed Frontend** (8 skills): PRD parsing, task breakdown, component pattern analysis, Angular patterns, RxJS, testing, accessibility, performance
 
 **E-commerce Development:**
 - **React E-commerce** (4 skills): React e-commerce patterns, payment verification, cart state management, product catalog optimization
@@ -124,60 +107,6 @@ Specialized knowledge packages following Anthropic's progressive disclosure arch
 
 [→ View complete skills documentation](docs/agent-skills.md)
 
-### Key Plugin Highlights
-
-**Production-Ready Development:**
-- **maestro-backend**: FastAPI backend with 3-loop code review and PRD-driven development
-- **degreed-fe-workspace**: Angular 19 with component reuse enforcement and WCAG 2.1 AA compliance
-- **jira-bugfix-analyzer**: Automated JIRA bug analysis with similar PR research
-- **jira-bugfix-implementer**: Automated bug fix implementation with testing
-
-**Infrastructure & Cloud:**
-- **kubernetes-operations**: K8s manifests, Helm charts, and GitOps workflows
-- **cloud-infrastructure**: Multi-cloud architecture with Terraform and cost optimization
-
-**AI & Machine Learning:**
-- **machine-learning-ops**: ML pipelines, model deployment, and MLOps automation
-- **agent-orchestration**: Multi-agent system optimization
-
-## Popular Use Cases
-
-### Backend Feature Development with PRD
-
-```bash
-/maestro-backend:backend-feature
-```
-
-Comprehensive FastAPI backend development with:
-- PRD parsing and task breakdown
-- 3-loop code review and fix cycles
-- Python testing patterns and async optimization
-- Final validation before deployment
-
-### Frontend Feature Development
-
-```bash
-/degreed-fe-workspace:frontend-feature
-```
-
-Angular 19 development with:
-- Component reuse enforcement
-- WCAG 2.1 AA accessibility compliance
-- RxJS patterns and state management
-- Nx monorepo integration
-
-### JIRA Bug Analysis and Implementation
-
-```bash
-/jira-bugfix-analyzer:analyze-jira <JIRA-ID>
-/jira-bugfix-implementer:implement-fix
-```
-
-Automated bug fixing workflow:
-- Product-repo mapping and similar PR research
-- Comprehensive fix suggestions
-- Automated implementation with testing
-- PR creation with detailed documentation
 
 ### Kubernetes and Cloud Infrastructure
 
@@ -189,102 +118,6 @@ Uses kubernetes-architect agent with 4 specialized skills for production-grade c
 
 [→ View complete usage guide](docs/usage.md)
 
-## Plugin Categories
-
-**9 categories, 21 plugins:**
-
-- 🎨 **Development** (7) - maestro-backend, degreed-fe-workspace, fullstack-ecommerce-app, react-ecommerce-development, frontend-mobile, code-documentation, code-refactoring
-- 🔄 **Workflows** (1) - git-pr-workflows
-- 🔍 **Quality** (2) - code-review-ai, codebase-cleanup
-- 🐛 **Bug Fixing** (2) - jira-bugfix-analyzer, jira-bugfix-implementer
-- 🤖 **AI & ML** (2) - agent-orchestration, machine-learning-ops
-- 📊 **Data** (1) - data-engineering
-- ☁️ **Infrastructure** (2) - kubernetes-operations, cloud-infrastructure
-- ⚡ **Performance** (1) - application-performance
-- 🔒 **Security** (1) - security-compliance
-- 📢 **Marketing** (2) - seo-technical-optimization, seo-analysis-monitoring
-
-[→ View complete plugin catalog](docs/plugins.md)
-
-## Architecture Highlights
-
-### Specialized Design
-
-- **Focused plugins** - Each plugin targets specific development workflows
-- **Production-ready** - Built for FastAPI, Angular 19, Node.js fullstack, React e-commerce, .NET, Kubernetes, and cloud platforms
-- **Comprehensive coverage** - 63 agents, 30 commands, 32 skills across 21 plugins
-- **Enterprise-grade** - 3-loop code review, accessibility compliance, payment verification, and automated testing
-
-### Progressive Disclosure (Skills)
-
-Three-tier architecture for token efficiency:
-1. **Metadata** - Name and activation criteria (always loaded)
-2. **Instructions** - Core guidance (loaded when activated)
-3. **Resources** - Examples and templates (loaded on demand)
-
-### Repository Structure
-
-```
-claude-agents/
-├── .claude-plugin/
-│   └── marketplace.json          # 21 plugins
-├── plugins/
-│   ├── maestro-backend/
-│   │   ├── agents/               # 5 Python/FastAPI experts
-│   │   ├── commands/             # 2 development commands
-│   │   └── skills/               # 6 specialized skills
-│   ├── degreed-fe-workspace/
-│   │   ├── agents/               # 5 Angular/TypeScript experts
-│   │   ├── commands/             # 2 development commands
-│   │   └── skills/               # 8 specialized skills
-│   ├── fullstack-ecommerce-app/
-│   │   ├── agents/               # 5 Node.js/React/RN experts
-│   │   ├── commands/             # 2 fullstack commands
-│   │   └── skills/               # 1 integration skill
-│   ├── react-ecommerce-development/
-│   │   ├── agents/               # 4 React/e-commerce experts
-│   │   ├── commands/             # 2 e-commerce commands
-│   │   └── skills/               # 4 specialized skills
-│   ├── kubernetes-operations/
-│   │   ├── agents/               # K8s architect
-│   │   └── skills/               # 4 K8s skills
-│   └── ... (14 more plugins)
-├── docs/                          # Comprehensive documentation
-└── README.md                      # This file
-```
-
-[→ View architecture details](docs/architecture.md)
-
-## Contributing
-
-To add new agents, skills, or commands:
-
-1. Identify or create the appropriate plugin directory in `plugins/`
-2. Create `.md` files in the appropriate subdirectory:
-   - `agents/` - For specialized agents
-   - `commands/` - For tools and workflows
-   - `skills/` - For modular knowledge packages
-3. Follow naming conventions (lowercase, hyphen-separated)
-4. Write clear activation criteria and comprehensive content
-5. Update the plugin definition in `.claude-plugin/marketplace.json`
-
-See [Architecture Documentation](docs/architecture.md) for detailed guidelines.
-
-## Resources
-
-### Documentation
-- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
-- [Plugins Guide](https://docs.claude.com/en/docs/claude-code/plugins)
-- [Subagents Guide](https://docs.claude.com/en/docs/claude-code/sub-agents)
-- [Agent Skills Guide](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
-- [Slash Commands Reference](https://docs.claude.com/en/docs/claude-code/slash-commands)
-
-### This Repository
-- [Plugin Reference](docs/plugins.md)
-- [Agent Reference](docs/agents.md)
-- [Agent Skills Guide](docs/agent-skills.md)
-- [Usage Guide](docs/usage.md)
-- [Architecture](docs/architecture.md)
 
 ## License
 
